@@ -1,8 +1,14 @@
 {
-  "name": "tuple-map",
+  "name": "@isogon/tuple-map",
   "version": "0.0.1",
   "description": "A simple way to map a tuple to some value",
+  "keywords": ["tuple", "map", "trie"],
+  "homepage": "https://github.com/isogon/tuple-map",
+  "bugs": "https://github.com/isogon/tuple-map/issues",
+  "license": "Unlicense",
+  "author": "Kegan Myers <kegan@keganmyers.com> (https://keganmyers.com)",
   "main": "dist/bundle.js",
+  "repository": "isogon/tuple-map",
   "scripts": {
     "build": "rollup src/index.js --format umd --name TupleMap --output dist/bundle.js",
     "lint": "concurrently \"yanr lint:src\" \"yarn lint:test\"",
@@ -12,9 +18,8 @@
     "test:before": "yarn build",
     "test:actual": "mocha test/"
   },
-  "author": "Kegan Myers <kegan@keganmyers.com>",
-  "license": "Unlicense",
   "devDependencies": {
+    "@isogon/eslint-config": "^0.0.13",
     "babel-eslint": "^7.0.0",
     "chai": "^3.5.0",
     "concurrently": "^3.4.0",
@@ -30,7 +35,7 @@
     "mocha": "^3.2.0",
     "rollup": "^0.41.5"
   },
-  "dependencies": {
-    "@isogon/eslint-config": "^0.0.13"
+  "engines" : {
+    "node": ">=6"
   }
 }

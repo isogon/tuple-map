@@ -11,7 +11,7 @@ Usage
 -----
 
 ```javascript
-import TupleMap from 'tuple-map';
+import TupleMap from '@isogon/tuple-map';
 
 const tm = new TupleMap(3); // it takes the size of the tuple
 
