@@ -16,7 +16,8 @@
     "lint:test": "eslint -c @isogon/eslint-config/tests test",
     "test": "yarn test:before && yarn test:actual",
     "test:before": "yarn build",
-    "test:actual": "mocha test/"
+    "test:actual": "mocha test/",
+    "manualPrepublish": "prepare-isogon-package . && yarn generate-lock-entry --production > yarn.lock"
   },
   "devDependencies": {
     "@isogon/eslint-config": "^0.0.13",

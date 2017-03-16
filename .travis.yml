@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- '6'
+before_install:
+- npm install -g npm@^4
+cache: yarn
+before_deploy:
+- yarn manualPrepublish
+deploy:
+  provider: npm
+  email: kegan+isogon@keganmyers.com
+  api_key:
+    secure: XzZ/sSRDgcWMW8tg8i+23IK7s6R0TRqr/ZNwtvosBqIxAMFewZ020b1FYZF9NGNIGC3z5R3dH9ACobASbfLqEu2C27jKQEF1jSoZtacdg4yYKib5yjCWPUTSGRE4EiU0m7abQDbQwb9fys6Hivs9YQh2gRXxVkVqVgf9tUvpyXif+ZeHCQR1Pcuo7BnwVviLRYhWciNhOK1A0Dzg24fhhEaGBS5M/7/mtgUcZz6UpEe0Nj5dPeMELhwQc09aU63/+GeQDIuRS+asydMozjJHAljPUUZhcw1Iok/X0kcUJPauNr41YJGKrHF+0sD00fzWj0l2vbLvPuGua/5/5Kbn8DUpcZsI1CXmiPk9WK/v0nWwMkjAPN0GbAHCddRBZU7CaLndLnW8swk+CAcvl4v3VY3dugXzZm50yxVwpP0Us4PPiUlxztJ2yG34Z4Ui3sWCJ75YI7PtETPWmiULMsXTpT01pn0YCiafEode4588s4z5Zplw5jy493T9B3xOlVXvlI178QwaJAwrZB/+BAawxeIlCioXTk4fOVcOWs5Geg6mnrL+1vy0jTgfPehj4YEk5CJvby/u8iba6jlGShGS80VY/8eGwHRWh5B8vSeA+iZb28kcw0h88xoGeAEnSc7FJBKfmb0+K+2y6vfNebjk+qque/h59tgJ+NsVn4GeoMA=
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: isogon/tuple-map
