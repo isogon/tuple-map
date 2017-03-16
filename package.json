@@ -17,10 +17,10 @@
     "build": "rollup src/index.js --format umd --name TupleMap --output dist/bundle.js",
     "lint": "concurrently \"yanr lint:src\" \"yarn lint:test\"",
     "lint:src": "eslint -c @isogon src",
-    "lint:test": "eslint -c @isogon/eslint-config/tests test",
+    "lint:test": "eslint -c @isogon/eslint-config/tests tests",
     "test": "yarn test:before && yarn test:actual",
     "test:before": "yarn build",
-    "test:actual": "mocha test/",
+    "test:actual": "mocha tests/",
     "manualPrepublish": "prepare-isogon-package . && yarn generate-lock-entry --production > yarn.lock"
   },
   "devDependencies": {
