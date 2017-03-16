@@ -1,0 +1,36 @@
+{
+  "name": "tuple-map",
+  "version": "0.0.1",
+  "description": "A simple way to map a tuple to some value",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "rollup src/index.js --format umd --name TupleMap --output dist/bundle.js",
+    "lint": "concurrently \"yanr lint:src\" \"yarn lint:test\"",
+    "lint:src": "eslint -c @isogon src",
+    "lint:test": "eslint -c @isogon/eslint-config/tests test",
+    "test": "yarn test:before && yarn test:actual",
+    "test:before": "yarn build",
+    "test:actual": "mocha test/"
+  },
+  "author": "Kegan Myers <kegan@keganmyers.com>",
+  "license": "Unlicense",
+  "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "chai": "^3.5.0",
+    "concurrently": "^3.4.0",
+    "eslint": "^3.13.0",
+    "eslint-config-airbnb": "14.0.0",
+    "eslint-config-airbnb-base": "11.0.1",
+    "eslint-plugin-babel": "^4.0.0",
+    "eslint-plugin-flowtype": "^2.29.1",
+    "eslint-plugin-html": "^1.5.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
+    "mocha": "^3.2.0",
+    "rollup": "^0.41.5"
+  },
+  "dependencies": {
+    "@isogon/eslint-config": "^0.0.13"
+  }
+}
