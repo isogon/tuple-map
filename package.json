@@ -2,7 +2,11 @@
   "name": "@isogon/tuple-map",
   "version": "0.0.1",
   "description": "A simple way to map a tuple to some value",
-  "keywords": ["tuple", "map", "trie"],
+  "keywords": [
+    "tuple",
+    "map",
+    "trie"
+  ],
   "homepage": "https://github.com/isogon/tuple-map",
   "bugs": "https://github.com/isogon/tuple-map/issues",
   "license": "Unlicense",
@@ -20,6 +24,7 @@
     "manualPrepublish": "prepare-isogon-package . && yarn generate-lock-entry --production > yarn.lock"
   },
   "devDependencies": {
+    "@isogon/prepare-package": "^0.0.3",
     "@isogon/eslint-config": "^0.0.13",
     "babel-eslint": "^7.0.0",
     "chai": "^3.5.0",
@@ -36,7 +41,7 @@
     "mocha": "^3.2.0",
     "rollup": "^0.41.5"
   },
-  "engines" : {
+  "engines": {
     "node": ">=6"
   }
 }
